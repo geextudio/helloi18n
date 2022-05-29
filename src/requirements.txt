@@ -1,0 +1,8 @@
+django
+django-admin-volt
+djangorestframework
+django-crispy-forms
+django_extensions
+django-debug-toolbar
+django-filter
+markdown
