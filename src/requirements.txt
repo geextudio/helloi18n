@@ -5,4 +5,5 @@ django-crispy-forms
 django_extensions
 django-debug-toolbar
 django-filter
+djLint
 markdown

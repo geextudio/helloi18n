@@ -1,7 +1,20 @@
 <!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello i18n!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <h1 style="margin:auto;width: 50%;">Hello I18n</h1>
+    <p></p>
 
-<h1 style="margin:auto;width: 50%;">Hello I18n</h1>
-<p></p>
+    {% block content %}
+    {% endblock %}
 
-{% block content %}
-{% endblock %}
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</body>
+
+</html>
