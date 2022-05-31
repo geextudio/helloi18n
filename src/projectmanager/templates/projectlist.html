@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if projects %}
+    <ul>
+        {% for project in projects %}
+            <li>
+                <a href="/project/{{project.id}}">{{ project.name }}</a> &nbsp;on&nbsp; {{ project.tech_stack_name }}
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No projects found</p>
+    {% endif %}
+
+{% endblock %}
