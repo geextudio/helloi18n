@@ -25,14 +25,15 @@ from helloi18n.helloapi import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
+router.register(r'projects', views.ProjectViewSet)
 
 urlpatterns = [
 
     #re_path(r'^', include('projectmanager.urls')),
     path('', include('projectmanager.urls')),
 
-    path('restapi', include(router.urls)),
-    path('restapi/api-auth/',
+    path('api/', include(router.urls)),
+    path('api-auth/',
          include('rest_framework.urls', namespace='rest_framework')),
 
     path('admin/', admin.site.urls),

@@ -1,5 +1,6 @@
 django
 django-admin-volt
+django-cors-headers
 djangorestframework
 django-crispy-forms
 django_extensions
