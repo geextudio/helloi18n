@@ -1,9 +1,9 @@
 django==3.2.13
-django-cors-headers
-djangorestframework==3.7.4
+django-cors-headers==3.13.0
+djangorestframework==3.13.1
 django-crispy-forms==1.7.2
 django_extensions==1.6.7
-django-debug-toolbar
-django-filter
+django-debug-toolbar==3.4.0
+django-filter==21.1
 djLint
 markdown
