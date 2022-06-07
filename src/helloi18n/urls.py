@@ -20,17 +20,23 @@ from django.contrib import admin
 from django.urls import path
 
 from rest_framework import routers
-from helloi18n.helloapi import views
+from helloi18n.helloapi import views as api_views
+from projectmanager import views as projects_views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
-router.register(r'projects', views.ProjectViewSet)
+router.register(r'users', api_views.UserViewSet)
+router.register(r'groups', api_views.GroupViewSet)
+router.register(r'projects', api_views.ProjectViewSet)
 
+# route path is usually ended with '/'
 urlpatterns = [
 
     #re_path(r'^', include('projectmanager.urls')),
+    # if defined route in app, we can use include('appname.urls') to load the route definitions
     path('', include('projectmanager.urls')),
+    # second parameter is ussually defined in app's view
+    # app's url should be defined inside app's urls
+    # path('projects/', projects_views.project_list, name='projects_home'),
 
     path('api/', include(router.urls)),
     path('api-auth/',

@@ -6,12 +6,15 @@
     <ul>
         {% for project in projects %}
             <li>
-                <a href="/project/{{project.id}}">{{ project.name }}</a> &nbsp;on&nbsp; {{ project.tech_stack_name }}
+                <a href="/projects/{{project.id}}">{{ project.name }}</a> &nbsp;on&nbsp; {{ project.tech_stack_name }}
             </li>
         {% endfor %}
     </ul>
     {% else %}
         <p>No projects found</p>
     {% endif %}
+
+
+    {% url 'default_project_list' %}
 
 {% endblock %}

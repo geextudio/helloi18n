@@ -18,3 +18,13 @@ def project_list(request):
         'tech_stack_options': TECH_STACK_OPTIONS,
     }
     return HttpResponse(template.render(context, request))
+
+
+def project_detail(request, project_id):
+    template = loader.get_template('projectdetail.html')
+    project = Project.objects.get(id=project_id)
+    project.tech_stack_name = TECH_STACK_OPTIONS[project.tech_stack][1]
+    context = {
+        'project': project
+    }
+    return HttpResponse(template.render(context, request))
